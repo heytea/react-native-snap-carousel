@@ -943,7 +943,7 @@ export default class Carousel extends Component {
     _onTouchRelease (event) {
         const { enableMomentum } = this.props;
 
-        if (enableMomentum && IS_IOS) {
+        if (enableMomentum) {
             clearTimeout(this._snapNoMomentumTimeout);
             this._snapNoMomentumTimeout = setTimeout(() => {
                 this._snapToItem(this._activeItem);
